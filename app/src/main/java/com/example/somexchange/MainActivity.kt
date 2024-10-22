@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Create the rates map
-        val ratesMap: Map<String, Float> = mapOf(
+        val ratesMap: MutableMap<String, Float> = mutableMapOf(
             "USD" to 85.5f,
             "EUR" to 92.65f,
             "JPY" to 0.57f,
@@ -82,6 +82,8 @@ class MainActivity : AppCompatActivity() {
             if (amount != null && rate != null) {
                 val result = (amount * rate).toString()
                 somView.text = result
+
+                ratesMap[currencySpinner.selectedItem.toString()] = rate
             } else {
                 somView.text = "Amount or rate is null"
             }
