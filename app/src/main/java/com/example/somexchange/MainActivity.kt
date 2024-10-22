@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
 
                 ratesMap[currencySpinner.selectedItem.toString()] = rate
             } else {
-                somView.text = "Amount or rate is null"
+                somView.text = getString(R.string.null_amount_rate_message)
             }
 
             // Hide the keyboard

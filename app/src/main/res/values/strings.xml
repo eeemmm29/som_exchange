@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Som exchange</string>
+    <string name="null_amount_rate_message">Amount or rate is null</string>
 </resources>
